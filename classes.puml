@@ -72,12 +72,9 @@ class Weapon extends Item{
 
 class Potions extends Item{
     - health: int
-    - mana: int
     + Potions(name: String, description: String, health: int, mana: int)
     + getHealth(): int
-    + getMana(): int
     + setHealth(health: int): void
-    + setMana(mana: int): void
 }
 
 class Room {
