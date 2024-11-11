@@ -1,0 +1,106 @@
+@startuml
+
+abstract class Player {
+    - name: String
+    - health: int
+    - mana: int
+    + Player(name: String, health: int(100), mana: int)
+    + getName(): String
+    + getHealth(): int
+    + getMana(): int
+    + setName(name: String): void
+    + setHealth(health: int): void
+    + setMana(mana: int): void
+}
+
+class Warrior extends Player{
+    - strength: int
+    - defense: int
+    + Warrior(name: String, health: int(100), mana: int, strength: int, defense: int)
+    + getStrength(): int
+    + getDefense(): int
+    + setStrength(strength: int): void
+    + setDefense(defense: int): void
+}
+
+class Mage extends Player{
+    - intelligence: int
+    - wisdom: int
+    + Mage(name: String, health: int(100), mana: int, intelligence: int, wisdom: int)
+    + getIntelligence(): int
+    + getWisdom(): int
+    + setIntelligence(intelligence: int): void
+    + setWisdom(wisdom: int): void
+}
+
+class Enemy {
+    - name: String
+    - health: int
+    - mana: int
+    + Enemy(name: String, health: int(100), mana: int)
+    + getName(): String
+    + getHealth(): int
+    + getMana(): int
+    + setName(name: String): void
+    + setHealth(health: int): void
+    + setMana(mana: int): void
+}
+
+class Inventory {
+    - items: List<Item>
+    + Inventory()
+    + addItem(item: Item): void
+    + removeItem(item: Item): void
+}
+
+abstract class Item {
+    - name: String
+    - description: String
+    + Item(name: String, description: String)
+    + getName(): String
+    + getDescription(): String
+    + setName(name: String): void
+    + setDescription(description: String): void
+}
+
+class Weapon extends Item{
+    - damage: int
+    + Weapon(name: String, description: String, damage: int)
+    + getDamage(): int
+    + setDamage(damage: int): void
+}
+
+class Potions extends Item{
+    - health: int
+    - mana: int
+    + Potions(name: String, description: String, health: int, mana: int)
+    + getHealth(): int
+    + getMana(): int
+    + setHealth(health: int): void
+    + setMana(mana: int): void
+}
+
+class Room {
+    - name: String
+    - description: String
+    - items: List<Item>
+    - enemies: List<Enemy>
+    - player : Player[]
+    + Room(name: String, description: String)
+    + getName(): String
+    + getDescription(): String
+    + setName(name: String): void
+    + setDescription(description: String): void
+    + addItem(item: Item): void
+    + removeItem(item: Item): void
+    + addEnemy(enemy: Enemy): void
+    + removeEnemy(enemy: Enemy): void
+}
+
+class Actions {
+    + attack(attacker: Player, defender: Player): void
+    + usePotion(player: Player, potion: Potions): void
+    + pickUpItem(player: Player, item: Item): void}
+}
+
+@enduml
