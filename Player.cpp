@@ -3,6 +3,11 @@
 #include "Player.h"
 
 Player::Player(){}
+Player::Player(std::string name, int health)
+{
+    this->name = name;
+    this->health = health;
+}
 
 std::string Player::getName()
 {
@@ -18,7 +23,13 @@ int Player::getHealth()
 }
 void Player::setHealth(int health)
 {
+    if(health < 0)
+    {
+        std::cout <<"Health cannot be negative" << std::endl;
+    }
+    else{
     this->health = health;
+    }
 }
 void Player::setPlayerClass(std::string playerClass)
 {

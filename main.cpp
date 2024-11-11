@@ -11,15 +11,19 @@ int main()
     cout << "Enemy name: " << enemy.getName() << endl;
     cout << "Enemy health: " << enemy.getHealth() << endl;
     //Test av klassen Warrior
-    Warrior player1("Player1");
+    Warrior player1("Klas");
+    Warrior player2;
     cout <<"Enter the name you want to name your Player of Warrior type: ";
     string name;
     getline(cin, name);
-    player1.setName(name);
+    player2.setName(name);
+    cout << "Player name: " << player2.getName() << endl;
+    cout << "Player health: " << player2.getHealth() << endl;
+    cout << "Player class: " << player2.getPlayerClass() << endl;
     cout << "Player name: " << player1.getName() << endl;
     cout << "Player health: " << player1.getHealth() << endl;
     cout << "Player class: " << player1.getPlayerClass() << endl;
-    player1.setHealth(20);
+    player1.setHealth(-10);
     cout << "Player health: " <<player1.getHealth() <<endl;
     cout << player1.playerDead() << endl;
     player1.setHealth(0);

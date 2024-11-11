@@ -6,7 +6,10 @@
 
 class Warrior : public Player{
     public: 
+    Warrior();
     Warrior(std::string name);
+    
+
 };
 #endif
 
