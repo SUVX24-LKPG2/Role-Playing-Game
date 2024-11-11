@@ -6,9 +6,13 @@ Potions::Potions(std::string_view name, std::string_view description) : Item(nam
 Potions::~Potions() {}
 
 int Potions::getHealth() const {
-    return health;
+    return this->health;
 }
 
 void Potions::setHealth(int health) {
-    this->health = health;
+    if (this->health - health < 0) {
+        health = 0;
+    } else {
+        this->health = health;
+    }
 }
