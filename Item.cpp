@@ -20,10 +20,10 @@ std::string_view Item::getDescription() const {
     return description;
 }
 
-std::string_view Item::setName(std::string_view name) {
+void Item::setName(std::string_view name) {
     this->name = name;
 }
 
-std::string_view Item::setDescription(std::string_view description) {
+void Item::setDescription(std::string_view description) {
     this->description = description;
 }

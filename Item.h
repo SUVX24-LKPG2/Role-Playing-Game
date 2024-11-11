@@ -16,8 +16,8 @@ public:
 
     std::string_view getName() const;
     std::string_view getDescription() const;
-    std::string_view setName(std::string_view name);
-    std::string_view setDescription(std::string_view description);
+    void setName(std::string_view name);
+    void setDescription(std::string_view description);
 };
 
 #endif // ITEM_H
