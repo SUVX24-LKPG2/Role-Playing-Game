@@ -2,9 +2,6 @@
 #include <string_view>
 #include "Item.h"
 
-std::string name;
-std::string description;
-
 Item::Item(std::string_view name, std::string_view description) {
     this->name = name;
     this->description = description;
