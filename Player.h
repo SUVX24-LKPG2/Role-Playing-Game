@@ -10,7 +10,6 @@ private:
     std:: string playerClass;
     public:
     Player();
-    //Player(std::string name, int health = 100);
     std::string getName();
     void setName(std::string name);
     int getHealth();

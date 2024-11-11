@@ -3,11 +3,7 @@
 #include "Player.h"
 
 Player::Player(){}
-/*Player::Player(std::string name, int health)
-{
-    this->name = name;
-    this->health = health;
-}*/
+
 std::string Player::getName()
 {
     return name;
@@ -37,6 +33,10 @@ std::string Player::playerDead()
     if(health <= 0)
     {
         return "You have died! Game Over!";
+    }
+    else 
+    {
+        return "You are still alive!";
     }
    
 }
