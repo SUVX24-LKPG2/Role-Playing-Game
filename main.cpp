@@ -11,8 +11,15 @@ int main()
     cout << "Enemy name: " << enemy.getName() << endl;
     cout << "Enemy health: " << enemy.getHealth() << endl;
     //Test av klassen Warrior
-    Warrior player1("Klas");
+    Warrior player1("Klas", 100, "Warrior");
     Warrior player2;
+    std:: string name1 = "Knight";
+    std:: string playerClass = "Warrior";
+    int health = 45; 
+    Warrior player3(name1, health, playerClass);
+    cout << "Player name: " << player3.getName() << endl;
+    cout << "Player health: " << player3.getHealth() << endl;
+    cout << "Player class: " << player3.getPlayerClass() << endl;
     cout <<"Enter the name you want to name your Player of Warrior type: ";
     string name;
     getline(cin, name);

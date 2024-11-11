@@ -11,6 +11,7 @@ private:
     public:
     Player();
     Player(std::string name, int health);
+    Player(std::string name, int health, std::string playerClass);
     std::string getName();
     void setName(std::string name);
     int getHealth();

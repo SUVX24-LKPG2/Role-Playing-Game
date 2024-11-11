@@ -9,6 +9,13 @@ Player::Player(std::string name, int health)
     this->health = health;
 }
 
+Player::Player(std::string name, int health, std::string playerClass)
+{
+    this->name = name;
+    this->health = health;
+    this->playerClass = playerClass;
+}
+
 std::string Player::getName()
 {
     return name;
