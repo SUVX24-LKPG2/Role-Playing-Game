@@ -16,7 +16,7 @@ public:
     ~Potions();
 
     int getHealth() const;
-    void setHealth(unsigned int health);
+    void setHealth(int health);
 };
 
 #endif // POTIONS_H
