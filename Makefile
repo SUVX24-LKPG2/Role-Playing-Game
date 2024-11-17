@@ -1,7 +1,7 @@
 # Compiler and flags
 CXX := g++
 CXXFLAGS := -Wall -Wextra -std=c++17 -Iinclude -Iftxui/include
-LDFLAGS := -Lftxui/build -lftxui
+LDFLAGS := -L/usr/local/lib -Lftxui/build -lftxui-screen -lftxui-dom -lftxui-component
 
 # Directories
 SRC_DIR := src
@@ -19,14 +19,14 @@ TARGET := game
 # Default rule: build the target
 all: $(TARGET)
 
-# Build FTXUI
-$(FTXUI_BUILD_DIR)/libftxui.a:
-	mkdir -p $(FTXUI_BUILD_DIR)
-	cd $(FTXUI_BUILD_DIR) && cmake .. -DCMAKE_BUILD_TYPE=Release
-	cd $(FTXUI_BUILD_DIR) && make
+# Build FTXUI (compile it if not already built)
+$(FTXUI_BUILD_DIR)/libftxui-component.a:
+	@mkdir -p $(FTXUI_BUILD_DIR)
+	@cd $(FTXUI_BUILD_DIR) && cmake .. -DCMAKE_BUILD_TYPE=Release
+	@cd $(FTXUI_BUILD_DIR) && make
 
 # Link the executable
-$(TARGET): $(OBJS) $(FTXUI_BUILD_DIR)/libftxui.a
+$(TARGET): $(OBJS) $(FTXUI_BUILD_DIR)/libftxui-component.a $(FTXUI_BUILD_DIR)/libftxui-screen.a $(FTXUI_BUILD_DIR)/libftxui-dom.a
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Compile source files into object files
