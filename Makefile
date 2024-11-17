@@ -21,25 +21,25 @@ all: $(TARGET)
 
 # Build FTXUI
 $(FTXUI_BUILD_DIR)/libftxui.a:
-    mkdir -p $(FTXUI_BUILD_DIR)
-    cd $(FTXUI_BUILD_DIR) && cmake .. -DCMAKE_BUILD_TYPE=Release
-    cd $(FTXUI_BUILD_DIR) && make
+	mkdir -p $(FTXUI_BUILD_DIR)
+	cd $(FTXUI_BUILD_DIR) && cmake .. -DCMAKE_BUILD_TYPE=Release
+	cd $(FTXUI_BUILD_DIR) && make
 
 # Link the executable
 $(TARGET): $(OBJS) $(FTXUI_BUILD_DIR)/libftxui.a
-    $(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Compile source files into object files
 $(BUILD_DIR)/%.o: %.cpp
-    @mkdir -p $(dir $@)
-    $(CXX) $(CXXFLAGS) -MMD -c $< -o $@
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -MMD -c $< -o $@
 
 # Include generated dependency files
 -include $(DEPS)
 
 # Clean build files
 clean:
-    rm -rf $(BUILD_DIR) $(TARGET)
-    rm -rf $(FTXUI_BUILD_DIR)
+	rm -rf $(BUILD_DIR) $(TARGET)
+	rm -rf $(FTXUI_BUILD_DIR)
 
 .PHONY: all clean
