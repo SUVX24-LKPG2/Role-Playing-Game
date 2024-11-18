@@ -1,12 +1,22 @@
 # Compiler and flags
 CXX := g++
-CXXFLAGS := -Wall -Wextra -std=c++17 -Iinclude -Iftxui/include
-LDFLAGS := -L/usr/local/lib -Lftxui/build -lftxui-screen -lftxui-dom -lftxui-component
+CXXFLAGS := -Wall -Wextra -std=c++17 -Iinclude
+
+# Static linking option (set to 1 for static, 0 for dynamic) (I guess this won't work on MacOS)
+STATIC_LINKING := 0
+
+# LDFLAGS (adjust for static or dynamic linking)
+ifeq ($(STATIC_LINKING), 1)
+    # Static Linking: Link against static libraries
+    LDFLAGS := -L/usr/local/lib -L/usr/lib -static
+else
+    # Dynamic Linking: Link against shared libraries
+    LDFLAGS := -L/usr/local/lib -L/usr/lib
+endif
 
 # Directories
 SRC_DIR := src
 BUILD_DIR := build
-FTXUI_BUILD_DIR := ftxui/build
 
 # Source files
 SRCS := main.cpp $(wildcard $(SRC_DIR)/*.cpp)
@@ -19,14 +29,8 @@ TARGET := game
 # Default rule: build the target
 all: $(TARGET)
 
-# Build FTXUI (compile it if not already built)
-$(FTXUI_BUILD_DIR)/libftxui-component.a:
-	@mkdir -p $(FTXUI_BUILD_DIR)
-	@cd $(FTXUI_BUILD_DIR) && cmake .. -DCMAKE_BUILD_TYPE=Release
-	@cd $(FTXUI_BUILD_DIR) && make
-
 # Link the executable
-$(TARGET): $(OBJS) $(FTXUI_BUILD_DIR)/libftxui-component.a $(FTXUI_BUILD_DIR)/libftxui-screen.a $(FTXUI_BUILD_DIR)/libftxui-dom.a
+$(TARGET): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Compile source files into object files
