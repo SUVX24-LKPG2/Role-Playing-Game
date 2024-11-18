@@ -8,7 +8,8 @@ private:
     std::string name;
     int health;
     std:: string playerClass;
-    public:
+
+public:
     Player();
     Player(std::string name, int health);
     Player(std::string name, int health, std::string playerClass);
@@ -16,7 +17,7 @@ private:
     void setName(std::string name);
     int getHealth();
     void setHealth(int health);
-     void setPlayerClass(std::string playerClass);
+    void setPlayerClass(std::string playerClass);
     std::string getPlayerClass();
     std::string playerDead();
 };
