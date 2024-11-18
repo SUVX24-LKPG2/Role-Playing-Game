@@ -19,12 +19,10 @@ int Player::getHealth() const
 
 void Player::setHealth(int health)
 {
-    if(health < 0)
-    {
-        std::cout <<"Health cannot be negative" << std::endl;
-    }
-    else{
-    this->health = health;
+    if (this->health - health < 0) {
+        health = 0;
+    } else {
+        this->health = health;
     }
 }
 
