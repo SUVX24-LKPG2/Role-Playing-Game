@@ -21,4 +21,3 @@ void Enemy::setHealth(int Health){
     }
     this->Health = Health;
 };
-    

@@ -84,8 +84,8 @@ void Game::gameLoop() {
     std::srand(std::time(nullptr));
     #ifndef _WIN32
     setRawMode();
-    displayGrid();
     #endif
+    displayGrid();
 
     while (true) {
         if (currentState == GameState::Combat) {
