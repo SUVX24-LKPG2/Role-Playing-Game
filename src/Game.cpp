@@ -6,6 +6,9 @@
 #include <locale>
 #include <unistd.h>
 #include <vector>
+#ifdef _WIN32
+#include <conio.h>
+#endif
 
 Game::Game() {
     // Initialize the grid
@@ -86,7 +89,13 @@ void Game::gameLoop() {
         if (currentState == GameState::Combat) {
             displayCombat();
         } else {
-            char input = getchar(); // Windows, use getchar() on Linux/Mac
+            char input;
+            #ifdef _WIN32
+            input = _getch();
+            #else
+            input = getchar(); // Use getchar() on Linux/Mac
+            #endif
+
             switch (input) {
                 case 'w': moveGrid(0, -1); break; // Up
                 case 's': moveGrid(0, 1); break;  // Down
