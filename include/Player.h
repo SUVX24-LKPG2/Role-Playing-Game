@@ -20,6 +20,7 @@ public:
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass();
     std::string playerDead();
+   
 };
 
 #endif
