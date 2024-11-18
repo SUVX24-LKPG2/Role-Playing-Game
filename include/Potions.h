@@ -13,7 +13,6 @@ private:
 
 public:
     Potions(std::string_view name, std::string_view description);
-    ~Potions();
 
     int getHealth() const;
     void setHealth(int health);

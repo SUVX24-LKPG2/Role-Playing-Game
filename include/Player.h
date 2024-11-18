@@ -7,18 +7,19 @@ class Player{
 private:
     std::string name;
     int health;
-    std:: string playerClass;
+    std::string playerClass;
 
 public:
-    Player();
-    Player(std::string name, int health);
-    Player(std::string name, int health, std::string playerClass);
-    std::string getName();
+    Player(int health = 100) : health(health) {}
+    Player(std::string name, int health = 100) : name(name), health(health) {}
+    Player(std::string name, int health = 100, std::string playerClass = "")
+        : name(name), health(health), playerClass(playerClass) {}
+    std::string getName() const;
     void setName(std::string name);
-    int getHealth();
+    int getHealth() const;
     void setHealth(int health);
     void setPlayerClass(std::string playerClass);
-    std::string getPlayerClass();
+    std::string getPlayerClass() const;
     std::string playerDead();
    
 };
