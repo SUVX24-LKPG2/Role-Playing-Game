@@ -3,20 +3,22 @@
 #include "Player.h"
 #include "Warrior.h"
 
-Warrior::Warrior() : Player::Player()
+Warrior::Warrior() : Player()
 {
     setHealth(100);
     std::string playerClass = "Warrior";
     setPlayerClass(playerClass);
 }
-Warrior::Warrior(std::string name) : Player::Player()
+
+Warrior::Warrior(std::string name) : Player()
 {
     setName(name);
     setHealth(100);
     std::string playerClass = "Warrior";
     setPlayerClass(playerClass);
 }
-Warrior::Warrior(std::string name, int health, std::string playerClass) : Player::Player(name, health, playerClass)
+
+Warrior::Warrior(std::string name, int health, std::string playerClass) : Player(name, health, playerClass)
 {
     setName(name);
     setHealth(health);

@@ -2,32 +2,21 @@
 #include <string>
 #include "Player.h"
 
-Player::Player(){}
-Player::Player(std::string name, int health)
-{
-    this->name = name;
-    this->health = health;
-}
-
-Player::Player(std::string name, int health, std::string playerClass)
-{
-    this->name = name;
-    this->health = health;
-    this->playerClass = playerClass;
-}
-
 std::string Player::getName()
 {
-    return name;
+    return m_name;
 }
+
 void Player::setName(std::string name)
 {
-    this->name = name;
+    this->m_name = name;
 }
-int Player::getHealth()
+
+int Player::getHealth() const
 {
-    return health;
+    return m_health;
 }
+
 void Player::setHealth(int health)
 {
     if(health < 0)
@@ -35,20 +24,23 @@ void Player::setHealth(int health)
         std::cout <<"Health cannot be negative" << std::endl;
     }
     else{
-    this->health = health;
+    this->m_health = health;
     }
 }
+
 void Player::setPlayerClass(std::string playerClass)
 {
-    this->playerClass = playerClass;
+    this->m_playerClass = playerClass;
 }
-std::string Player::getPlayerClass()
+
+std::string Player::getPlayerClass() const
 {
-    return playerClass;
+    return m_playerClass;
 }
-std::string Player::playerDead()
+
+std::string Player::playerDead() const
 {
-    if(health <= 0)
+    if(m_health <= 0)
     {
         return "You have died! Game Over!";
     }
@@ -56,5 +48,24 @@ std::string Player::playerDead()
     {
         return "You are still alive!";
     }
-   
+}
+
+int Player::getPositionX() const
+{
+    return this->m_positionX;
+}
+
+void Player::setPositionX(int positionX)
+{
+    this->m_positionX = positionX;
+}
+
+int Player::getPositionY() const
+{
+    return this->m_positionY;
+}
+
+void Player::setPositionY(int positionY)
+{
+    this->m_positionY = positionY;
 }
