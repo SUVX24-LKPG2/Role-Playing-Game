@@ -21,6 +21,7 @@ public:
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass() const;
     std::string playerDead();
+    void addDamage(int damage);
 };
 
 #endif

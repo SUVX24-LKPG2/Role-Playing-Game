@@ -48,3 +48,10 @@ std::string Player::playerDead()
     }
    
 }
+
+void Player::addDamage(int damage)
+{
+    int health = Player::getHealth();
+    health -= damage;
+    Player::setHealth(health);
+}
