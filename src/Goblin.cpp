@@ -19,8 +19,7 @@ Goblin::Goblin() : Enemy("Goblin", 5, 10) {
         std::cout << line << std::endl;
     }
     std::cout << "\nName: " << this->name << " Health: " << this->Health << std::endl;
- 
     }
-};
+
 
       

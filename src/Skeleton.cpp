@@ -24,6 +24,4 @@ Skeleton::Skeleton() : Enemy("Skeleton", 10, 15) {
         std::cout << line << std::endl;
     }
     std::cout << "\nName: " << this->name << " Health: " << this->Health << std::endl;
- 
-}
-};
+    }
