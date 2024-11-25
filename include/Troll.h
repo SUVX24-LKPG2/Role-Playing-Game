@@ -11,7 +11,7 @@ int Health;
 std::vector<std::string> asciiArt;
 
 public:
-    Troll(const std::string& name, int Health);
+    Troll();
 
     void enemyUI() const;
 };

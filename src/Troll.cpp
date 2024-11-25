@@ -1,7 +1,7 @@
 #include "Troll.h"
 #include <iostream>
 
-Troll::Troll(const std::string& name, int Health) : Enemy(name, Health) {
+Troll::Troll() : Enemy("Troll", 100) { 
     asciiArt = {
     "      -. -. `.  / .-' _.'  _",
     "     .--`. `. `| / __.-- _' `",
@@ -28,4 +28,7 @@ void Troll::enemyUI() const {
     for (const auto& line : asciiArt) {
         std::cout << line << std::endl;
     }
+    std::cout << "\nName: " << this->name << " Health: " << this->Health << std::endl;
+ 
 }
+};
