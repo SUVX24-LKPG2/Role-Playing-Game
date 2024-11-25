@@ -2,19 +2,21 @@
 #define ENEMY_H
 #include <string>
 
-using namespace std;
-
 class Enemy{
 private:
-    string Name;
-    int Health;
+    std::string name;
+    int health;
+    int m_MinDamage;
+    int m_MaxDamage;
 
 public:
-    Enemy(const string Name, int Health);
-    string getName() const;
+    Enemy(const std::string& name, int minDamage, int maxDamage)
+        : name(name), health(100), m_MinDamage(minDamage), m_MaxDamage(maxDamage) {}
+    std::string getName() const;
     int getHealth();
-    void setName(string Name);
+    void setName(std::string Name);
     void setHealth(int Health);
     void takeDamage(int damage);
+    int attack() const;
 };
 #endif

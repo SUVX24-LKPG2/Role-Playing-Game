@@ -1,7 +1,7 @@
 #include "EntityCreator.h"
 #include "Enemy.h"
-#include "Goblin.h"
-#include "Orc.h"
+//#include "Goblin.h"
+//#include "Orc.h"
 #include "Troll.h"
 #include <random>
 
@@ -18,10 +18,12 @@ std::shared_ptr<Enemy> EntityCreator::createRandomEnemy() {
     switch (choice)
     {
     case GOBLIN:
-        return std::make_shared<Goblin>();
+        //return std::make_shared<Goblin>();
+        return nullptr;
 
     case ORC:
-        return std::make_shared<Orc>();
+        //return std::make_shared<Orc>();
+        return nullptr;
 
     case TROLL:
         return std::make_shared<Troll>();

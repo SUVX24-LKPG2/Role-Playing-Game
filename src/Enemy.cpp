@@ -2,28 +2,22 @@
 
 using namespace std;
 
-Enemy::Enemy(const string Name, int Health){
-    this->Name = Name;
-    this->Health = 100 ;
-};
 string Enemy::getName() const{
-    return Name;
+    return name;
 };
 int Enemy::getHealth(){
-    return Health;
+    return health;
 };
 void Enemy::setName(const string Name){
-    this->Name = Name;
-};
-void Enemy::setHealth(int Health){
-    if (Health < 0) {
-        throw invalid_argument("Health cannot be negative");
-    }
-    this->Health = Health;
+    this->name = Name;
 };
 
 void Enemy::takeDamage(int damage)
 {
-    Health -= damage;  
+    health -= damage;  
 }
-    
+
+int Enemy::attack() const
+{
+    return m_MinDamage + rand() % (m_MaxDamage - m_MinDamage + 1);
+}

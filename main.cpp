@@ -1,7 +1,7 @@
-#include "Game.h"
-#include "GameObject.h"
+#include "EntityCreator.h"
 #include "Utils.h"
 #include "Warrior.h"
+#include "Mage.h"
 #include "Room.h"
 #include "Player.h"
 #include <iostream>
@@ -66,7 +66,7 @@ int main()
 
         // Start combat if there are enemies in the room
         if(!currentRoom.getEnemies().empty()) {
-            Combat::start(*player, *currentRoom.getEnemies().front());
+            //Combat::start(*player, *currentRoom.getEnemies().front());
         }
 
         std::cout << "Move to the next room? (y/n): ";

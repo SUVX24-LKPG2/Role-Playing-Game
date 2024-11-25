@@ -4,14 +4,10 @@
 #include <string>
 #include "Player.h"
 
-class Warrior : public Player{
-    public: 
-    Warrior();
-    ~Warrior();	
-    Warrior(std::string name);
-    Warrior(std::string name, int health, std::string playerClass);
-    
-
+class Warrior : public Player {
+public:
+    Warrior(const std::string& name) : Player(name, "Warrior", 10, 30) {} // Warrior has a min damage of 10 and max damage of 30
+    ~Warrior() {}
 };
-#endif
 
+#endif // WARRIOR_H

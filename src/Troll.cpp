@@ -22,9 +22,10 @@ Troll::Troll(const std::string& name, int Health) : Enemy(name, Health) {
     " _.--/--/'( ) ) ( ) ) )`\\-\\-\\-._",
     "( ( ( ) ( ) ) ( ) ) ( ) ) ) ( ) )"
 };
+}
+
 void Troll::enemyUI() const {
     for (const auto& line : asciiArt) {
         std::cout << line << std::endl;
     }
 }
-};

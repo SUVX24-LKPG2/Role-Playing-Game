@@ -4,13 +4,10 @@
 #include <string>
 #include "Player.h"
 
-class Mage : public Player{
-    public: 
-    Mage();
-    ~Mage();
-    Mage(std::string name);
-    Mage(std::string name, int health, std::string playerClass);
-    
-
+class Mage : public Player {
+public:
+    Mage(const std::string& name) : Player(name, "Mage", 10, 20) {}
+    ~Mage() {}
 };
-#endif
+
+#endif // MAGE_H

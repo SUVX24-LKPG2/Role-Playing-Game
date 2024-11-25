@@ -8,12 +8,12 @@ private:
     std::string name;
     int health;
     std::string playerClass;
+    int minDamage;
+    int maxDamage;
 
 public:
-    Player(int health = 100) : health(health) {}
-    Player(std::string name, int health = 100) : name(name), health(health) {}
-    Player(std::string name, int health = 100, std::string playerClass = "")
-        : name(name), health(health), playerClass(playerClass) {}
+    Player(const std::string& name, const std::string& playerClass, int minDamage, int maxDamage)
+        : name(name), health(100), playerClass(playerClass), minDamage(minDamage), maxDamage(maxDamage) {}
     std::string getName() const;
     ~Player();
     void setName(std::string name);
