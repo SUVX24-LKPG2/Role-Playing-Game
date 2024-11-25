@@ -2,10 +2,7 @@
 #include "Enemy.h"
 #include <iostream>
 #include <unistd.h>
-#ifdef _WIN32
-#include <windows.h>
-#endif
-
+#include <cstdlib>
 
 void Utils::clearScreen() {
     #ifdef _WIN32
