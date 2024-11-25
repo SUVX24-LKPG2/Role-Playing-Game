@@ -12,6 +12,12 @@ string Enemy::getName() const{
 int Enemy::getHealth(){
     return Health;
 }
+int Enemy::getEnemyDamage(){
+    return Damage;
+}
+void Enemy::setEnemyDamage(int Damage){
+    this->Damage = Damage;
+}
 void Enemy::setName(const string Name){
     this->Name = Name;
 }
@@ -21,4 +27,6 @@ void Enemy::setHealth(int Health){
     }
     this->Health = Health;
 }
+
+
     

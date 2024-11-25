@@ -11,6 +11,7 @@ void Combatlogic::playerAttack(Player& player, Enemy& monster) {
     monster.setHealth(monster.getHealth() - ATTACK_POWER);
 }
 void Combatlogic::monsterAttack(Player& player, Enemy& monster){
-    cout << monster.getName() << " 攻击了 " << player.getName() << "，造成了 " << monster.attackPower << " 点伤害！" << endl;
-    player.setHealth(player.getHealth() -= monster.attackPower);
+    monster.setEnemyDamage(10);
+    cout << monster.getName() << " attacked" << player.getName() << "，dealt " << monster.getEnemyDamage()<< " damage！" << endl;
+    player.setHealth(player.getHealth() -= monster.getEnemyDamage());
 }

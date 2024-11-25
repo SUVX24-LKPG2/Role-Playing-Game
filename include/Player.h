@@ -17,7 +17,7 @@ public:
         : name(name), health(health), playerClass(playerClass) {}
     std::string getName() const;
     void setName(std::string name);
-    int getHealth() const;
+    int getHealth();
     void setHealth(int health);
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass() const;

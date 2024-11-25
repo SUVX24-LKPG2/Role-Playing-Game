@@ -8,6 +8,7 @@ class Enemy{
 private:
     string Name;
     int Health;
+    int Damage;
 
 public:
     Enemy(const string Name, int Health);
@@ -15,5 +16,7 @@ public:
     int getHealth();
     void setName(string Name);
     void setHealth(int Health);
+    int getEnemyDamage();
+    void setEnemyDamage(int Damage);
 };
 #endif

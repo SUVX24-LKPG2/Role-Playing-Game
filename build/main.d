@@ -1,2 +1,2 @@
-build/main.o: main.cpp Player.h include/Utils.h include/Game.h \
-  include/Player.h
+build/main.o: main.cpp include/Combatlogic.h include/Player.h \
+  include/Enemy.h

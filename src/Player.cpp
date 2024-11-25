@@ -12,7 +12,7 @@ void Player::setName(std::string name)
     this->name = name;
 }
 
-int Player::getHealth() const
+int Player::getHealth() 
 {
     return health;
 }
@@ -47,7 +47,4 @@ std::string Player::playerDead()
         return "You are still alive!";
     }
    
-}
-std::int Player::getAttackPower() {
-    
 }
