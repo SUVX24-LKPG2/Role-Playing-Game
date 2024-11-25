@@ -36,20 +36,8 @@ std::string Player::getPlayerClass() const
     return playerClass;
 }
 
-std::string Player::playerDead()
-{
-    if(health <= 0)
-    {
-        return "You have died! Game Over!";
-    }
-    else 
-    {
-        return "You are still alive!";
-    }
-   
-}
 
-void Player::addDamage(int damage)
+void Player::takeDamage(int damage)
 {
     int health = Player::getHealth();
     health -= damage;

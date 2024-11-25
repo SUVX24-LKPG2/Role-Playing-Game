@@ -20,8 +20,7 @@ public:
     void setHealth(int health);
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass() const;
-    std::string playerDead();
-    void addDamage(int damage);
+    void takeDamage(int damage);
 };
 
 #endif
