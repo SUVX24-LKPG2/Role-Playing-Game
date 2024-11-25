@@ -7,6 +7,7 @@
 class Warrior : public Player{
     public: 
     Warrior();
+    ~Warrior();	
     Warrior(std::string name);
     Warrior(std::string name, int health, std::string playerClass);
     
