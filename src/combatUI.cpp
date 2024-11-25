@@ -19,5 +19,5 @@ void combatUI (const Enemy& enemy, const Player& player ) {
     cout << "   /   \\                          \n";
     cout << "  /     \\                         \n";
     cout << enemy.getName()  << "  " << enemy.getHealth() << "\t\t" << player.getName() << "  " << player.getHealth() << endl;
-    cout << "===========================================" << endl;
+    cout << "=================================" << endl;
 }
