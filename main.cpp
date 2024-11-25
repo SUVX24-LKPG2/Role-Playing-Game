@@ -3,10 +3,11 @@
 #include <string_view>
 #include "Enemy.h"
 #include "Warrior.h"
-using namespace std;
+#include "Game.h"
 
 int main()
 {
+    /*
     Enemy enemy ("Diablo", 100);
     cout << "Enemy name: " << enemy.getName() << endl;
     cout << "Enemy health: " << enemy.getHealth() << endl;
@@ -36,5 +37,9 @@ int main()
     player1.setHealth(0);
     cout << "Player health: " <<player1.getHealth() <<endl;
     cout << player1.playerDead() << endl;
+    */
+
+
+    
     return 0;
 }
