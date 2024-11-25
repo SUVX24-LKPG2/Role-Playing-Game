@@ -22,7 +22,7 @@ std::shared_ptr<Enemy> EntityCreator::createRandomEnemy() {
         //return std::make_shared<Goblin>();
         return nullptr;
 
-    case ORC:
+    case SKELETON:
         //return std::make_shared<Skeleton>();
         return nullptr;
 
