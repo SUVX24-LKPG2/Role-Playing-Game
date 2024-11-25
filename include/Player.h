@@ -8,6 +8,7 @@ private:
     std::string name;
     int health;
     std::string playerClass;
+    int attackPower;
 
 public:
     Player(int health = 100) : health(health) {}
@@ -21,6 +22,7 @@ public:
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass() const;
     std::string playerDead();
+    
    
 };
 

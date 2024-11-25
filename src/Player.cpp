@@ -48,3 +48,6 @@ std::string Player::playerDead()
     }
    
 }
+std::int Player::getAttackPower() {
+    
+}
