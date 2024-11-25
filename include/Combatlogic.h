@@ -6,7 +6,8 @@ using namespace std;
 
 class Combatlogic{
     public:
-        void playerAttack(Player& player, Enemy& monster);
-        void monsterAttack(Player& player, Enemy& monster);
+        void playerAttack(Player& player, Enemy& enemy);
+        void monsterAttack(Player& player, Enemy& enemy);
+        void battleLoop(Player& player, Enemy& enemy);
 };
 #endif
