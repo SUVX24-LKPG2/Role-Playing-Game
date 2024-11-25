@@ -39,7 +39,5 @@ std::string Player::getPlayerClass() const
 
 void Player::takeDamage(int damage)
 {
-    int health = Player::getHealth();
-    health -= damage;
-    Player::setHealth(health);
+    health -= damage;  
 }

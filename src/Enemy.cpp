@@ -21,4 +21,9 @@ void Enemy::setHealth(int Health){
     }
     this->Health = Health;
 };
+
+void Enemy::takeDamage(int damage)
+{
+    Health -= damage;  
+}
     

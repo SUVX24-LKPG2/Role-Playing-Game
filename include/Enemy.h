@@ -15,5 +15,6 @@ public:
     int getHealth();
     void setName(string Name);
     void setHealth(int Health);
+    void takeDamage(int damage);
 };
 #endif
