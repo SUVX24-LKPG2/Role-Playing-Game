@@ -2,6 +2,8 @@
 #include "GameObject.h"
 #include "Utils.h"
 #include "Warrior.h"
+#include "Room.h"
+#include "Player.h"
 #include <iostream>
 #include <memory>
 #include <random>

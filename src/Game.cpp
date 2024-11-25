@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 
+/* 
 run() {
     std::srand(std::time(nullptr));
     while (true) {
@@ -15,3 +16,5 @@ run() {
         combat.CombatUI();
     }
 }
+
+*/
