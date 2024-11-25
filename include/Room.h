@@ -10,7 +10,6 @@ class Room {
 private:
     std::string m_name;
     std::string m_description;
-
     std::vector<std::shared_ptr<Enemy>> m_enemies;
 
 public:

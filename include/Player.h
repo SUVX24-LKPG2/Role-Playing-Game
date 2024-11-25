@@ -15,13 +15,13 @@ public:
     Player(std::string name, int health = 100, std::string playerClass = "")
         : name(name), health(health), playerClass(playerClass) {}
     std::string getName() const;
+    ~Player();
     void setName(std::string name);
     int getHealth() const;
     void setHealth(int health);
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass() const;
-    std::string playerDead();
-    void addDamage(int damage);
+    void takeDamage(int damage);
 };
 
 #endif
