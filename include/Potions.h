@@ -2,20 +2,20 @@
 #define POTIONS_H
 
 #include <string>
-#include <string_view>
-#include "Item.h"
 
-class Potions : public Item
+class Potions
 {
 private:
-    int health;
-    int mana;
+    std::string m_name;
+    std::string m_Type;
+    int m_Amount;
 
 public:
-    Potions(std::string_view name, std::string_view description);
+    Potions(const std::string& name, const std::string& type, int amount) 
+        : m_name(name), m_Type(type), m_Amount(amount) {}
+    ~Potions();
 
-    int getHealth() const;
-    void setHealth(int health);
+    int getAmount() const;
 };
 
 #endif // POTIONS_H
