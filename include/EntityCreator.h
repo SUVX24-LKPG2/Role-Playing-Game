@@ -2,6 +2,7 @@
 #define ENTITYCREATOR_H
 
 #include "Enemy.h"
+#include <memory>
 
 class EntityCreator
 {
