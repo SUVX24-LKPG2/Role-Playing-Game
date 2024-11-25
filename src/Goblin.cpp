@@ -13,6 +13,7 @@ Goblin::Goblin() : Enemy("Goblin", 5, 10) {
     "      | Y |",
     "     /  |  \\"
     };
+    }
     void Goblin::enemyUI() const {
     for (const auto& line : asciiArt) {
         std::cout << line << std::endl;
