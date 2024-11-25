@@ -2,20 +2,19 @@
 #define WEAPON_H
 
 #include <string>
-#include <string_view>
-#include "Item.h"
 
-class Weapon : public Item
+class Weapon    
 {
 private:
-    int damage;
+    std::string m_name;
+    int m_damage; //max extra damage
 
 public:
-    Weapon(std::string_view name, std::string_view description, int damage);
+    Weapon() : m_name("Sword"), m_damage(1) {}
+    Weapon(const std::string& name, int damage) : m_name(name), m_damage(damage) {}
     ~Weapon();
 
     int getDamage() const;
-    void setDamage(int damage);
 };
 
 #endif // WEAPON_H

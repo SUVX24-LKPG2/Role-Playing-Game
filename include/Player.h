@@ -15,7 +15,7 @@ public:
     Player(const std::string& name, const std::string& playerClass, int minDamage, int maxDamage)
         : name(name), health(100), playerClass(playerClass), minDamage(minDamage), maxDamage(maxDamage) {}
     std::string getName() const;
-    ~Player();
+    ~Player() {}
     void setName(std::string name);
     int getHealth() const;
     void setHealth(int health);
