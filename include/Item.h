@@ -1,10 +1,11 @@
 #ifndef ITEM_H
 #define ITEM_H
 
+#include "GameObject.h"
 #include <string>
 #include <string_view>
 
-class Item
+class Item : public GameObject
 {
 private:
     std::string name;
