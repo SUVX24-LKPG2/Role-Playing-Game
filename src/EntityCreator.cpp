@@ -4,6 +4,7 @@
 //#include "Orc.h"
 #include "Troll.h"
 #include <random>
+#include <memory>
 
 // Create a random enemy
 
