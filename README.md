@@ -10,7 +10,7 @@ Welcome to the Role-Playing Game project! This README will guide you through the
 - [License](#license)
 
 ## Introduction
-This is a role-playing game where players can create characters, embark on quests, and explore a fantasy world.
+This is a role-playing game where players can create characters, embark on quests, and explore a fantasy world. (Somewhere in the future ;))
 
 ## Features
 - Character creation
