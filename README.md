@@ -23,7 +23,7 @@ To install the game, follow these steps:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/Role-Playing-Game.git
+    git clone https://github.com/SUVX24-LKPG2/Role-Playing-Game.git
     ```
 2. Navigate to the project directory:
     ```bash
