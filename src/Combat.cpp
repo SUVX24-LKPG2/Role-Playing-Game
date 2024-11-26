@@ -1,10 +1,8 @@
 #include "Combat.h"
-#include "Utils.h"
-#include "Player.h"
 #include "Enemy.h"
-
+#include "Player.h"
+#include "Utils.h"
 #include <iostream>
-
 
 void Combat::start(Player& player, Enemy& enemy, bool& lastRoom) {
     while (player.getHealth() > 0 && enemy.getHealth() >0 ) {
@@ -22,13 +20,9 @@ void Combat::start(Player& player, Enemy& enemy, bool& lastRoom) {
             int damage = player.attack();
             enemy.takeDamage(damage);
             std::cout << "You attack the enemy for " <<damage << " damage" << std::endl;
-    
-           
-
         } else if (choice == 2) {
             if (player.getHealthPotions() == 0) {
                 std::cout << "You have no health potions left!" << std::endl;
-    
                 continue;
             }
             player.useHealthPotion();
@@ -45,8 +39,7 @@ void Combat::start(Player& player, Enemy& enemy, bool& lastRoom) {
                 break;
             }
         }
-
-       Combat::enemyAttack(player, enemy);
+        Combat::enemyAttack(player, enemy);
     }
 
     if (player.getHealth() <= 0) {
@@ -55,12 +48,13 @@ void Combat::start(Player& player, Enemy& enemy, bool& lastRoom) {
         std::cout <<"You were a hero and killed the puny enemy!!" << std::endl;
     }
 };
+
 void Combat::enemyAttack(Player& player, Enemy& enemy)
 {
-  if(enemy.getHealth() > 0) {
-            int damage = enemy.attack();
-            player.takeDamage(damage);
-            std::cout << "The enemy attacks you for " << damage<< " damage" << std::endl;
-            Utils::pauseForSeconds(2);
-        }
+    if(enemy.getHealth() > 0) {
+        int damage = enemy.attack();
+        player.takeDamage(damage);
+        std::cout << "The enemy attacks you for " << damage<< " damage" << std::endl;
+        Utils::pauseForSeconds(2);
+    }
 }

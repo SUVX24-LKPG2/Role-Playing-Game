@@ -26,7 +26,7 @@ void Utils::pauseForSeconds(int seconds) {
     #endif
 }
 
-void printStringWithPause(const std::string& str)
+void Utils::printStringWithPause(const std::string& str)
 {
     for (char c : str)
     {

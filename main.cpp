@@ -20,8 +20,8 @@ int main()
     Utils::clearScreen();
 
     enum PlayerClass { WARRIOR = 1, MAGE = 2 };
-    std::cout << "1 - Warrior" << std::endl;
-    std::cout << "2 - Mage" << std::endl;
+    std::cout << "1 - Warrior (Klasse Krigare)" << std::endl;
+    std::cout << "2 - Mage (Karl Trollkarl)" << std::endl;
     std::cout << "Choose your class: ";
     int choice;
     std::cin >> choice;
@@ -41,7 +41,7 @@ int main()
     }
 
     // Add a few health potions to the player
-    player->setHealthPotions(2);
+    player->setHealthPotions(5);
 
     // Create rooms
     Room room1("Room 1", "A dark room with a door to the north.");
@@ -62,8 +62,10 @@ int main()
     while(player->getHealth() > 0) {
         Utils::clearScreen();
         Room& currentRoom = rooms[currentRoomIndex];
-        std::cout << "You are in " << currentRoom.getName() << std::endl;
-        std::cout << currentRoom.getDescription() << std::endl;
+        //std::cout << "You are in " << currentRoom.getName() << std::endl;
+        //std::cout << currentRoom.getDescription() << std::endl;
+        Utils::printStringWithPause(currentRoom.getDescription());
+        Utils::pauseForSeconds(1);
 
         // Display enemies in the room
         currentRoom.displayEnemies();
@@ -74,9 +76,7 @@ int main()
             Combat::start(*player, *currentRoom.getEnemies().front(), lastRoom);
         }
 
-        
-         
-
+        std::cout << std::endl;
         std::cout << "Move to the next room? (y/n): ";
         std::string move;
         std::cin >> move;
@@ -88,7 +88,13 @@ int main()
         }
     }
 
-    std::cout << "You died!" << std::endl;
+    if (currentRoomIndex == rooms.size() - 1) {
+        Utils::clearScreen();
+        Utils::printStringWithPause("Thank you " + player->getName() + " but our princess is in another castle!");
+    } else {
+        Utils::clearScreen();
+        Utils::printStringWithPause("You died!");
+    }
 
     return 0;
 }
