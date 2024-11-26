@@ -22,7 +22,6 @@ std::string Player::getPlayerClass() const
     return playerClass;
 }
 
-
 void Player::takeDamage(int damage)
 {
     health -= damage;  
