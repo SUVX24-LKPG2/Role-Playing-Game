@@ -1,13 +1,14 @@
 #include "Utils.h"
 #include "Enemy.h"
-#include <iostream>
+#include <chrono>
 #include <cstdlib>
+#include <iostream>
+#include <thread>
 #ifdef _WIN32
 #include <windows.h>
 #else
 #include <unistd.h>
 #endif
-
 
 void Utils::clearScreen() {
     #ifdef _WIN32
@@ -23,4 +24,14 @@ void Utils::pauseForSeconds(int seconds) {
     #else
     sleep(seconds); // sleep takes seconds
     #endif
+}
+
+void printStringWithPause(const std::string& str)
+{
+    for (char c : str)
+    {
+        std::cout << c << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    }
+    std::cout << std::endl;
 }
