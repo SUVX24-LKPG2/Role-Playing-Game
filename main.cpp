@@ -57,7 +57,7 @@ int main()
     // Create a vector of rooms
     std::vector<Room> rooms = { room1, room2, room3, room4 };
     size_t currentRoomIndex = 0;
-    
+
     // Game loop, there's still much to do here
     while(player->getHealth() > 0) {
         Utils::clearScreen();

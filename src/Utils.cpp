@@ -18,6 +18,7 @@ void Utils::clearScreen() {
     #endif
 }
 
+// replace sleep with std::this_thread::sleep_for
 void Utils::pauseForSeconds(int seconds) {
     #ifdef _WIN32
     Sleep(seconds * 1000); // Sleep takes milliseconds

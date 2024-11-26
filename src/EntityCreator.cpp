@@ -20,11 +20,9 @@ std::shared_ptr<Enemy> EntityCreator::createRandomEnemy() {
     {
     case GOBLIN:
         return std::make_shared<Goblin>();
-        return nullptr;
 
     case SKELETON:
         return std::make_shared<Skeleton>();
-        return nullptr;
 
     case TROLL:
         return std::make_shared<Troll>();
