@@ -31,13 +31,13 @@ To install the game, follow these steps:
     ```
 3. Install the dependencies:
     ```bash
-    npm install
+    make
     ```
 
 ## Usage
 To start the game, run the following command:
 ```bash
-npm start
+./game
 ```
 
 ## License
