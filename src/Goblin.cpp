@@ -18,5 +18,4 @@ Goblin::Goblin() : Enemy("Goblin", 5, 10) {
     for (const auto& line : asciiArt) {
         std::cout << line << std::endl;
     }
-    std::cout << "\nName: " << this->name << " Health: " << this->Health << std::endl;
     }

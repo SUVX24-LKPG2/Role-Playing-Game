@@ -6,7 +6,8 @@
 
 class Combat {
 public:
-    static void start(Player& player, Enemy& enemy);
+    static void start(Player& player, Enemy& enemy, bool& lastRoom);
+    static void enemyAttack(Player& player, Enemy& enemy);
 };
 
 #endif // COMBAT_H

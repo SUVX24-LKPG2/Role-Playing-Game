@@ -4,6 +4,8 @@
 namespace Utils
 {
     void clearScreen();
+    void pauseForSeconds(int seconds);
 }
 
 #endif // UTILS_H
+

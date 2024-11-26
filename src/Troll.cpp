@@ -28,6 +28,4 @@ void Troll::enemyUI() const {
     for (const auto& line : asciiArt) {
         std::cout << line << std::endl;
     }
-    std::cout << "\nName: " << this->name << " Health: " << this->Health << std::endl;
- 
 }

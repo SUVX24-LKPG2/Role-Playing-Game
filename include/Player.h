@@ -27,6 +27,8 @@ public:
     int getHealthPotions() const;
     void setHealthPotions(int healthPotions);
     void useHealthPotion();
+    int attack() const;
+
 };
 
 #endif

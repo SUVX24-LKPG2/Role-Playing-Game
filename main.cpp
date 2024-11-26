@@ -68,14 +68,19 @@ int main()
         // Display enemies in the room
         currentRoom.displayEnemies();
 
+        bool lastRoom = currentRoomIndex == rooms.size() - 1;
         // Start combat if there are enemies in the room
         if(!currentRoom.getEnemies().empty()) {
-            Combat::start(*player, *currentRoom.getEnemies().front());
+            Combat::start(*player, *currentRoom.getEnemies().front(), lastRoom);
         }
+
+        
+         
 
         std::cout << "Move to the next room? (y/n): ";
         std::string move;
         std::cin >> move;
+
         if (move == "y" && currentRoomIndex < rooms.size() - 1) {
             currentRoomIndex++;
         } else {

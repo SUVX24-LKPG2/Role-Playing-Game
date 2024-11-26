@@ -42,3 +42,8 @@ void Player::useHealthPotion()
     health += 30;
     healthPotions--;
 }
+
+int Player::attack() const
+{
+    return minDamage + rand() % (maxDamage - minDamage + 1);
+}
