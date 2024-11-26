@@ -1,4 +1,4 @@
-# Role-Playing Game
+# Role Playing Game
 
 Welcome to the Role-Playing Game project! This README will guide you through the setup and usage of the game.
 
