@@ -4,11 +4,6 @@
 #include <cstdlib>
 #include <iostream>
 #include <thread>
-#ifdef _WIN32
-#include <windows.h>
-#else
-#include <unistd.h>
-#endif
 
 void Utils::clearScreen() {
     #ifdef _WIN32
@@ -18,13 +13,10 @@ void Utils::clearScreen() {
     #endif
 }
 
-// replace sleep with std::this_thread::sleep_for
+
 void Utils::pauseForSeconds(int seconds) {
-    #ifdef _WIN32
-    Sleep(seconds * 1000); // Sleep takes milliseconds
-    #else
-    sleep(seconds); // sleep takes seconds
-    #endif
+    // sleep replaced with std::this_thread::sleep_for for cross-platform compatibility
+    std::this_thread::sleep_for(std::chrono::seconds(seconds));
 }
 
 void Utils::printStringWithPause(const std::string& str)
