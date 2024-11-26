@@ -12,8 +12,7 @@ void Combat::start(Player& player, Enemy& enemy) {
 
     if (player.getHealth() <= 0) {
         // Game over
-    }
-    else {
+    } else if (enemy.getHealth() <= 0) {
         // Player won
     }
 };
