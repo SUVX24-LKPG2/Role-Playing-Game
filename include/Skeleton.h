@@ -12,7 +12,7 @@ std::vector<std::string> asciiArt;
 
 public:
     Skeleton();
-
+    ~Skeleton() {}
     void enemyUI() const override;
 };
 

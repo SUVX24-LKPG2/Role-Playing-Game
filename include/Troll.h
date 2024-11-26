@@ -12,7 +12,7 @@ std::vector<std::string> asciiArt;
 
 public:
     Troll();
-
+    ~Troll() {}
     void enemyUI() const override;
 };
 

@@ -12,6 +12,7 @@ private:
 public:
     Enemy(const std::string& name, int minDamage, int maxDamage)
         : name(name), health(100), m_MinDamage(minDamage), m_MaxDamage(maxDamage) {}
+    virtual ~Enemy() {}
     std::string getName() const;
     int getHealth();
     void setName(std::string Name);

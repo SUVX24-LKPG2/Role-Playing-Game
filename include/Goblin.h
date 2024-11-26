@@ -12,7 +12,7 @@ std::vector<std::string> asciiArt;
 
 public:
     Goblin();
-
+    ~Goblin() {}
     void enemyUI() const override;
 };
 
