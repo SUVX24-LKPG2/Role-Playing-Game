@@ -7,7 +7,6 @@
 class Troll : public Enemy {
 private:
 std::string name;
-int Health;
 std::vector<std::string> asciiArt;
 
 public:
