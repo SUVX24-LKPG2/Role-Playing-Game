@@ -18,5 +18,6 @@ public:
     void setHealth(int Health);
     void takeDamage(int damage);
     int attack() const;
+    virtual void enemyUI() const = 0;
 };
 #endif
