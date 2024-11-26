@@ -27,3 +27,19 @@ void Player::takeDamage(int damage)
 {
     health -= damage;  
 }
+
+int Player::getHealthPotions() const
+{
+    return healthPotions;
+}
+
+void Player::setHealthPotions(int healthPotions)
+{
+    this->healthPotions = healthPotions;
+}
+
+void Player::useHealthPotion()
+{
+    health += 30;
+    healthPotions--;
+}

@@ -39,6 +39,9 @@ int main()
         break;
     }
 
+    // Add a few health potions to the player
+    player->setHealthPotions(2);
+
     // Create rooms
     Room room1("Room 1", "A dark room with a door to the north.");
     Room room2("Room 2", "Monster Lair");

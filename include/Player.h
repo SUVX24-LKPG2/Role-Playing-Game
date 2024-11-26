@@ -10,6 +10,8 @@ private:
     std::string playerClass;
     int minDamage;
     int maxDamage;
+    int healthPotions;
+    int manaPotions;
 
 public:
     Player(const std::string& name, const std::string& playerClass, int minDamage, int maxDamage)
@@ -22,6 +24,9 @@ public:
     void setPlayerClass(std::string playerClass);
     std::string getPlayerClass() const;
     void takeDamage(int damage);
+    int getHealthPotions() const;
+    void setHealthPotions(int healthPotions);
+    void useHealthPotion();
 };
 
 #endif
